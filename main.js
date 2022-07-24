@@ -1,4 +1,4 @@
-import './style.css';
+import '/style.css';
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js';
 
@@ -60,12 +60,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./assets/space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const teutzTexture = new THREE.TextureLoader().load('teutz.jpg');
+const teutzTexture = new THREE.TextureLoader().load('./assets/teutz.jpg');
 
 const teutz = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: teutzTexture }));
 
@@ -73,8 +73,8 @@ scene.add(teutz);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('./assets/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('./assets/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
